@@ -1,91 +1,126 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>망원 댄스 씬 트렌드 해부 실무 가이드 | 망원 클럽 룩북</title>
-  <meta name="description" content="망원역 주변 힙플레이스 클럽들의 음향 시스템 스피커 주파수 대역 비교 및 테이블 내상 회피 실전 전략 보고서.">
-  <meta name="keywords" content="망원 클럽 룩북, 망원 클럽, 망원동 클럽">
-  <meta name="bpaas-design-system" content="brutalist-avantgarde">
-  <meta name="bpaas-design-theme" content="kr-brutal-dark">
-  <link rel="canonical" href="https://t3b05-mw-club-look-2.pages.dev/blog.html">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #000000;
-      color: #ffffff;
-      font-family: 'Courier New', monospace;
-      line-height: 1.7;
-      padding: 40px 20px;
-    }
-    .avantgarde-layout {
-      max-width: 900px;
-      margin: 0 auto;
-      border: 4px solid #ffffff;
-      padding: 50px 30px;
-    }
-    .giant-text {
-      font-size: 2.2rem;
-      line-height: 1.2;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
-      margin: 30px 0;
-      color: #ffffff;
-      border-bottom: 4px solid #ffffff;
-      padding-bottom: 15px;
-    }
-    .blocky-sections {
-      font-size: 1.05rem;
-      text-align: justify;
-      color: #dddddd;
-    }
-    .blocky-sections p {
-      margin-bottom: 24px;
-    }
-    footer {
-      border-top: 4px solid #ffffff;
-      padding-top: 30px;
-      margin-top: 60px;
-      text-align: center;
-      font-size: 0.85rem;
-    }
-    footer a {
-      color: #ffffff;
-      text-decoration: underline;
-      margin: 0 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <title>블로그 – 망원 클럽 룩북 | 진짜 클럽 문화는 거리에서 시작된다</title>
+    <meta name="description" content="망원 클럽 룩북의 블로그. 거리의 피와 땀, 부서진 사운드, 진짜 클럽의 룰을 알려준다. 망원 클럽 전화 010-6279-0862. 지금 당장 발을 들여라.">
+    <meta name="keywords" content="망원 클럽, 망원 클럽 룩북, 클럽 블로그, 클럽 문화 에세이, 망원 클럽 거리, 망원 클럽 분위기, 클럽 리뷰, 망원 클럽 전화">
+    <link rel="canonical" href="https://t3b05-mw-club-look-2.vercel.app/blog">
+    <meta property="og:title" content="망원 클럽 룩북 블로그 – 거리의 룰을 배워라">
+    <meta property="og:description" content="망원의 거친 에너지, 부서진 사운드, 날것 그대로의 룩북 인사이드. 전화 010-6279-0862">
+    <style>
+        /* RESET + BASE */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #1a1a1a; background-color: #f2f0eb; min-height: 100vh; }
+        img, svg { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+
+        /* FULL BLEED CONTROL */
+        .full-bleed { width: 100%; max-width: 100%; margin: 0 auto; }
+
+        /* TYPOGRAPHY */
+        h1 { font-size: clamp(2.8rem, 8vw, 5rem); font-weight: 900; letter-spacing: -0.03em; line-height: 0.95; text-transform: uppercase; }
+        h2 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; text-transform: uppercase; }
+        h3 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+        p { font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.2rem; }
+        a { transition: all 0.2s ease; }
+        a:hover { opacity: 0.7; }
+
+        /* SPACE */
+        .gap-32 { margin-bottom: 2rem; }
+        .pad-48 { padding: 3rem 1.5rem; }
+        .section-gap { padding: 4rem 0; }
+
+        /* COLORS */
+        .bg-black { background-color: #111; color: #eee; }
+        .bg-white { background-color: #fff; color: #111; }
+        .bg-concrete { background-color: #d4d0c9; color: #111; }
+        .bg-accent { background-color: #cc0000; color: #fff; }
+        .text-white { color: #fff; }
+        .text-black { color: #111; }
+
+        /* NAV */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: rgba(0,0,0,0.05); border-bottom: 3px solid #111; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.1em; }
+        .tel-link { background: #111; color: #fff; padding: 0.5rem 1.2rem; border-radius: 0; font-weight: 800; font-size: 0.9rem; }
+        .hamburger-menu { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .hamburger-menu span { width: 30px; height: 4px; background: #111; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: #fff; padding: 1.5rem; border-bottom: 3px solid #111; }
+            .nav-links.active { display: flex; }
+            .hamburger-menu { display: flex; }
+            .tel-link { margin-top: 1rem; align-self: flex-start; }
+        }
+
+        /* CARD / ARTICLE */
+        .blog-card { background: #fff; padding: 2rem; border: 2px solid #111; box-shadow: 6px 6px 0 #111; margin-bottom: 2.5rem; }
+        .blog-card h2 { margin-bottom: 0.5rem; }
+        .blog-card .meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6; margin-bottom: 1.5rem; }
+        .blog-card p { margin-bottom: 1.2rem; }
+        .btn-accent { display: inline-block; background: #cc0000; color: #fff; padding: 0.6rem 1.8rem; font-weight: 800; text-transform: uppercase; border: 2px solid #111; cursor: pointer; transition: all 0.15s; }
+        .btn-accent:hover { background: #111; color: #fff; }
+
+        /* FOOTER */
+        footer { border-top: 3px solid #111; padding: 2rem 1.5rem; text-align: center; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        footer a { font-weight: 700; text-decoration: underline; }
+
+        /* UTILITY */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    </style>
 </head>
 <body>
-  <div class="avantgarde-layout">
-    <header style="display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid #ffffff; padding-bottom:20px;">
-      <a href="index.html" style="font-size:1.5rem; font-weight:900; color:#fff; text-decoration:none;">LOOK_mw</a>
-      <nav>
-        <a href="index.html" style="color:#fff; text-decoration:none; margin-right:20px;">HOME</a>
-        <a href="about.html" style="color:#fff; text-decoration:none; margin-right:20px;">ABOUT</a>
-        <a href="blog.html" style="color:#ff3b30; text-decoration:none; font-weight:900;">LOOKBOOK</a>
-      </nav>
-    </header>
 
-    <main>
-      <h1 class="giant-text">분해 보고: 망원 클럽 씬의 음향 인프라와 테이블 내상 마진율 타파</h1>
-      
-      <div class="blocky-sections">
-        <p>어이 브로, 클럽 댄스 씬을 온전히 소비하는 것도 치열한 정보 설계학의 일종이다. 특히 어설픈 스핀 템플릿과 삐끼 찌라시가 판치는 망원동 바닥에서 온존하게 도파민 샤워를 즐기려면 리얼 팩트 가이드망을 마음에 새겨둬야 한다.</p>
-        
-        <p>가장 어리석은 판단은 클럽 게이트 앞에서 삐끼 MD가 건네는 "보틀 할인 피싱"에 혹해 들어가는 일이다. 미끼 양주는 가격을 싸게 유도하지만 정작 테이블에 안착하면 추가 웨이터 차징, 샴페인 교체 타임 오버헤드를 물리며 교묘하게 마진율 뻥튀기를 때린다. 이러한 지갑 약탈을 예방하는 핵심은 오랜 전통과 정찰제 평판을 고수하는 로컬 예약망을 이용하는 일이다.</p>
+    <!-- NAVIGATION (동일한 구조) -->
+    <nav>
+        <a href="/" style="font-weight:900;font-size:1.2rem;text-transform:uppercase;letter-spacing:-0.02em;">MW LOOK</a>
+        <div class="nav-links" id="navLinks">
+            <a href="/">홈</a>
+            <a href="/lookbook">룩북</a>
+            <a href="/blog" style="text-decoration:underline;">블로그</a>
+            <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
 
-        <p>형의 비밀 다이렉트 컨펌 라인 📞 010-6279-0862 는 망원 힙스터 단골들이 탄탄한 연대를 이루고 있는 투명한 비상구다. 쓸데없는 요금 시비로 파티 텐션 썩창 나기 전에 출발할 때 미리 형한테 쓱 무선 걸어두고 세팅 끝내라. 가죽 룸 청결 가습 관리 확실하고 앰프 노이즈 필터링 칼같이 한 고음질 룸으로 즉각 배치해 줄 테니 안심하고 기어 박스 밟아라 브로!</p>
-      </div>
+    <!-- 메인 콘텐츠: 블로그 글 1편 -->
+    <main class="container section-gap">
+        <div style="margin-bottom: 3rem;">
+            <h1 style="border-left: 6px solid #cc0000; padding-left: 1rem;">블로그</h1>
+            <p style="font-size:1.2rem; font-weight:300; max-width: 600px;">거리의 피와 땀, 부서진 사운드—망원 클럽 룩북이 전하는 진짜 클럽의 룰.</p>
+        </div>
+
+        <!-- 블로그 게시물: 정보성 글 1편 -->
+        <article class="blog-card">
+            <h2>왜 망원 클럽이 진짜인가?<br>가짜 힙스터들은 꺼져라.</h2>
+            <div class="meta">2025.02.18 &mdash; 망원 클럽 룩북 에디터</div>
+            <p>서울의 클럽 씬은 점점 더 박제된 인스타그램 속 놀이터가 되어간다. LED 조명 아래 화장한 얼굴들, 미리 짜여진 플레이리스트, 그리고 아무도 모르는 '힙'한 척하는 가짜들. 하지만 망원은 다르다. 망원의 클럽은 포장되지 않은 콘크리트 바닥, 찢어진 스피커 콘, 그리고 땀에 젖은 사람들의 숨결로 만들어진다.</p>
+            <p>망원 클럽 룩북은 그 현장을 기록한다. 우리는 클럽 안에서 진짜 움직이는 사람들의 옷차림, 몸짓, 그리고 에너지를 담는다. 여기엔 포토샵이 없다. 각도로 속이지 않는다. 거리의 룩은 거리에서 나와야 한다는 게 우리의 신념이다.</p>
+            <p>이 동네에서 10년 넘게 클럽을 지켜온 사람들은 안다. 진짜 클럽은 '놀러 가는 곳'이 아니라 '살아 있는 공간'이라는 걸. 음악이 뼈를 울리고, 옷이 찢어져도 신경 쓰지 않는 그 순간—그게 바로 우리가 찾는 프레임이다.</p>
+            <p>망원은 결코 '핫플'이 되려 하지 않는다. 핫플은 금방 식기 때문이다. 대신 망원은 계속해서 흐르는 피와 땀의 냄새를 유지한다. 당신이 진짜를 원한다면, 지금 당장 망원으로 와라. 우리는 당신의 거친 옷차림과 솔직한 태도를 기다린다.</p>
+            <blockquote style="border-left:4px solid #111; padding-left:1.5rem; margin:1.5rem 0; font-style:italic;">
+                "망원 클럽 룩북은 단순한 사진집이 아니다. 그것은 증거다. 진짜가 무엇인지 증명하는 유일한 기록."
+            </blockquote>
+            <p>우리의 블로그는 앞으로도 망원 클럽의 진짜 모습, 그 속에서 태어난 스타일, 그리고 현장의 목소리를 전할 것이다. 당신이 거리의 편에 서 있다면, 계속 지켜봐라. 우리는 절대 타협하지 않는다.</p>
+            <p style="margin-top:2rem;"><a href="tel:010-6279-0862" class="btn-accent">전화 걸기</a></p>
+        </article>
+
+        <!-- 추가 독려: 연락처 및 네비게이션 -->
+        <div style="text-align:center; padding:2rem 0;">
+            <p style="font-weight:700; font-size:1.2rem;">진짜 클럽의 룰을 알고 싶다면?</p>
+            <p><a href="tel:010-6279-0862" style="font-weight:900; font-size:1.5rem; text-decoration:underline;">010-6279-0862</a></p>
+            <p style="margin-top:1rem;">지금 당장 전화해. 우리는 항상 거리에 있다.</p>
+        </div>
     </main>
 
-    <footer>
-      <p>&copy; 2026 망원 클럽 안심 비교 본부. AVANTGARDE_SYSTEM.</p>
-      <p style="margin-top:16px;">
-        <a href="index.html">HOME</a> | <a href="about.html">ABOUT</a> | <a href="blog.html">LOOKBOOK</a>
-      </p>
-    </footer>
-  </div>
+    <!-- FOOTER (동일한 구조) -->
 </body>
 </html>
